@@ -6,6 +6,12 @@ This repo is in alfa state and under construction (Start maj 2020).
 
 This repo is for a Arduino automated henhouse.
 
+Part of Open Source code used from Makersguide.com:
+Thanks to Benne de Bakker, for the guide at Makersguide.com
+https://www.makerguides.com/28byj-48-stepper-motor-arduino-tutorial/
+
+
+
 MCU: Arduino Mini Pro for test
 (Upgrades to Arduino Nano 33 IoT)
 
