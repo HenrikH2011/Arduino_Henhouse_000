@@ -9,7 +9,7 @@ This repo is for a Arduino automated henhouse.
 MCU: Arduino Mini Pro for test
 (Upgrades to Arduino Nano 33 IoT)
 
-OnBoard LED PIN 13 for MCU programming connection
+OnBoard LED PIN 13 for MCU programming connection test
 MCU PIN: D13
 
 Motor Driver board: ULN2003 stepper motor driver and 28BYJ-48 - 5VDC Steppermotor. MOTOR TEST for henhouse door open/Close
