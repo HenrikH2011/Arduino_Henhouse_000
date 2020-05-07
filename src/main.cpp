@@ -1,7 +1,20 @@
+/*
+Project: Arduino_Henhouse_000 
+
+Author: Henrik Hansen, Electronic And Code (EAC), Denmark
+
+This code is in alfa state and under construction (Start maj 2020). 
+
+This code is for a Arduino automated henhouse.
+
+Part of Open Source code used from Makersguide.com:
+Thanks to Benne de Bakker, for the guide at Makersguide.com
+https://www.makerguides.com/28byj-48-stepper-motor-arduino-tutorial/
+
+*/
 
 
 /*
-
 // the setup function runs once when you press reset or power the board
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
