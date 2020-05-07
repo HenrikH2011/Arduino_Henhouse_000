@@ -31,8 +31,19 @@ void loop() {
 // Initialize with pin sequence IN1-IN3-IN2-IN4 for using the AccelStepper library with 28BYJ-48 stepper motor:
 AccelStepper stepper = AccelStepper(MotorInterfaceType, motorPin1, motorPin3, motorPin2, motorPin4);
 
-const int lightSensorPin01 = A0
-const int pushButtomMotorUp = 
+const int lightSensorPin = A0; // OUTPUT, Analog read photoresistor
+
+const int magneticSensorOpenPin = 2; // INPUT, Digital read magnetic senor for henhouse door open state
+const int magneticSensorClosePin = 3; // INPUT, Digital read magnetic sensor for henhouse door close state
+
+const int pushButtonCriticalStopPin = 4; //   INPUT, Digital read for henhouse door critical stop
+
+const int pushButtonMotorUpPin = 5; // INPUT, Digital read pushbutton
+const int pushButtonMotorDownPin = 6; // INPUT, Digital read pushbutton
+
+const int pushButtonLightPin = 7; // INPUT, Digital read for light on/off. Indoor light in henhouse (230VAC lamp relay control)
+const int lightRelayPin = 12; // OUTPUT, Digital write for 230VAC relay control board (indoor light in henhouse)
+
 
 void setup() {
   // initialize digital pin LED_BUILTIN as an output. For MCU connection test

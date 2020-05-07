@@ -18,10 +18,10 @@ MCU PIN: D8, D9, D10, D11 - OUTPUT
 Photoresistor, light sensor
 MCU PIN: A0 - INPUT
 
-MagnetSensorSwitch, motor stop control
+MagneticSensorSwitch, motor stop control
 MCU PIN: D2, D3 - INPUT
 
-TouchSwitch, critical stop
+Push button, critical stop
 MCU PIN: D4 - INPUT
 
 Push button, manuel motor control for henhouse door Open/Close
