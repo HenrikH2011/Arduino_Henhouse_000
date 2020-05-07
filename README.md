@@ -1,6 +1,6 @@
 Project: Arduino_Henhouse_000 
 
-Author: Henrik Hansen, Denmark
+Author: Henrik Hansen, Electronic And Code (EAC), Denmark
 
 This repo is in alfa state and under construction (Start maj 2020). 
 
