@@ -58,14 +58,17 @@ const int pushButtonLightPin = 7; // INPUT, Digital read for light on/off. Indoo
 const int lightRelayPin = 12; // OUTPUT, Digital write for 230VAC relay control board (indoor light in henhouse)
 
 
-void setup() {
+void setup() 
+{
   // initialize digital pin LED_BUILTIN as an output. For MCU connection test
   pinMode(LED_BUILTIN, OUTPUT);
-}  
+  
   // Set the maximum steps per second:
-  stepper.setMaxSpeed(1000);
+  stepper.setMaxSpeed(500); // MAX speed 500 with a load = 1000kg Recommanded load max 500kg
 }
-void loop() {
+
+void loop() 
+{
   //MCU connection test
   digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(1000);                       // wait for a second
@@ -76,26 +79,33 @@ void loop() {
  
   // Set the current position to 0:
   stepper.setCurrentPosition(0);
-  // Run the motor forward at 500 steps/second until the motor reaches 4096 steps (1 revolution):
-  while (stepper.currentPosition() != 4096) {
+  // Run the motor forward at x steps/second until the motor reaches y steps (4096 step = 1 revolution) DOWN/CLOSE :
+  while (stepper.currentPosition() != 20480) {
     stepper.setSpeed(500);
     stepper.runSpeed();
   }
   delay(1000);
   // Reset the position to 0:
   stepper.setCurrentPosition(0);
-  // Run the motor backwards at 1000 steps/second until the motor reaches -4096 steps (1 revolution):
-  while (stepper.currentPosition() != -4096) {
-    stepper.setSpeed(-1000);
+  // Run the motor backwards at x steps/second until the motor reaches -y steps (z revolution) UP/OPEN :
+  while (stepper.currentPosition() != -20480) {
+    stepper.setSpeed(-500);
     stepper.runSpeed();
   }
   delay(1000);
+
+ /*
   // Reset the position to 0:
   stepper.setCurrentPosition(0);
   // Run the motor forward at 1000 steps/second until the motor reaches 8192 steps (2 revolutions):
   while (stepper.currentPosition() != 8192) {
     stepper.setSpeed(1000);
     stepper.runSpeed();
+
+  
   }
-  delay(3000);
+ */  
+ // delay(3000);
+
+
 }
