@@ -17,12 +17,12 @@ Project data:
 PSU MCU: 5VDC
 PSU motordriver / Steppermotor: 5VDC
 
-Test load: 1000kg
-Max speed with 1000kg load = 500
+Test load: 1000g
+Max speed with 1000g load = 500 speedstep
 Current with load at speed 500 = 180mA
-Recommanded speed for all load = 500
+Recommanded speed for all load = 500 speedstep
 
-Test 260kg
+Test 260g
 Speed = 500
 Current with load = 180mA
 
