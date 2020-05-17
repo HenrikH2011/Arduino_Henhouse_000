@@ -1,7 +1,7 @@
 /*
 Project: Arduino_Henhouse_000 
 
-Author: Henrik Hansen, Electronic And Code (EAC), Denmark
+Author/Editor: Henrik Hansen, Electronic And Code (EAC), Denmark
 
 This code is in alfa state and under construction (Start maj 2020). 
 
@@ -34,6 +34,21 @@ void loop() {
 // Include the AccelStepper library:
 #include <Arduino.h>
 #include <AccelStepper.h>
+
+// Magnetic Sensor pin definition:
+#define magSensOpen 2      //Magnetic Sensor Up/Open
+#define magSensClose 3      //Magnetic Sensor Down/Close
+
+// Critical STOP PushButtom:
+#define criticalStop 4    //Critical STOP SwitchButtom
+
+// Manuel Henhouse door control - Open/Close:
+#define manuelOpen 5      // Manuel Open SwitchButtom
+#define manmuelClose 6    // Manuel Close SwitchButtom
+
+// Manuel Light On/Off:
+#define manuelLight 7     // Manuel Light On/Off SwitchButtom
+
 // Motor pin definitions:
 #define motorPin1  8      // IN1 on the ULN2003 driver
 #define motorPin2  9      // IN2 on the ULN2003 driver
@@ -79,16 +94,16 @@ void loop()
  
   // Set the current position to 0:
   stepper.setCurrentPosition(0);
-  // Run the motor forward at x steps/second until the motor reaches y steps (4096 step = 1 revolution) DOWN/CLOSE :
-  while (stepper.currentPosition() != 20480) {
+  // Run the motor forward at x steps/second until the motor reaches y steps (4096 step = 1 revolution) UP/OPEN :
+  while (stepper.currentPosition() != 25480) {
     stepper.setSpeed(500);
     stepper.runSpeed();
   }
   delay(1000);
   // Reset the position to 0:
   stepper.setCurrentPosition(0);
-  // Run the motor backwards at x steps/second until the motor reaches -y steps (z revolution) UP/OPEN :
-  while (stepper.currentPosition() != -20480) {
+  // Run the motor backwards at x steps/second until the motor reaches -y steps (z revolution) DOWN/CLOSE : 
+  while (stepper.currentPosition() != -25480) {
     stepper.setSpeed(-500);
     stepper.runSpeed();
   }
